@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<script type="text/javascript" src="/webjars/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+Index.html
+<br>
+<button id="btn">按钮</button>
+<div id="show"></div>
+<script type="text/javascript">
+	$("#btn").click(function(){
+		$.ajax({
+			//url:'http://localhost:8099/test/test1.do',
+			url:'http://localhost:8099/front/test1.do',
+			data:{name:'王五'},
+			type:'post',
+			success:function(result){
+				$("#show").html(result.name);
+			}
+		});
+	});
+</script>
+</body>
+</html>
